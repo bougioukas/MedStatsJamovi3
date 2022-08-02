@@ -1,0 +1,14 @@
+# Inference for numerical data: 2 samples
+
+Two sample t-test (Student's t-test) can be used if we have two independent (unrelated) groups (eg., males-females, unmatched case-controls, treatment-non treatment) and one quantitative variable of interest (e.g., age, weight, systolic blood pressure). For example, we may want to compare the age in males and females or the weights in two groups of children, each child being randomly allocated to receive either a dietary supplement or placebo.
+
+::: {.callout-warning icon="false"}
+## **Assumptions for conducting a Student's t-test**
+
+1.  The groups are independent
+2.  The outcome of interest is continuous
+3.  The data is normally distributed in both groups
+4.  The data in both groups have similar standard deviations
+:::
+
+$$t = \frac{\bar{x}_{1} - \bar{x}_{2}}{se_{dif}}$$

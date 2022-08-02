@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "An Introduction to Medical Statistics with Jamovi",
+    "section": "",
+    "text": "This textbook is for medical students, doctors, medical researchers, nurses, members of professions allied to medicine, and all others concerned with medical data.\nWhile statistics books focus on mathematics, this textbook focuses on using a computer to conduct data analysis. That means using a statistical software package, in this case the R programming language for statistics and graphics. Our aim is to keep a balance between mathematical rigor and readability as well as learning R and statistics simultaneously.\nMost of the examples discussed in this textbook are based on scientific studies whose data are publicly available. For each example, we provide the step-by-step application of R. Readers are encouraged to follow these steps while reading the textbook so that they can learn statistics through hands-on experience.\nAll sections of this textbook are reproducible as they were made using Quarto® that includes R code used to produce the figures, tables and results. Quarto® is an open-source scientific and technical publishing system built on Pandoc.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n\nThis textbook is free to use, and is licensed under the Creative Commons Attribution-NonCommercial-NoDerivs 4.0 License."
+  },
+  {
+    "objectID": "introduction.html",
+    "href": "introduction.html",
+    "title": "\n1  Introduction\n",
+    "section": "",
+    "text": "See Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "two_samples.html",
+    "href": "two_samples.html",
+    "title": "6  Inference for numerical data: 2 samples",
+    "section": "",
+    "text": "Assumptions for conducting a Student’s t-test\n\n\n\n\nThe groups are independent\nThe outcome of interest is continuous\nThe data is normally distributed in both groups\nThe data in both groups have similar standard deviations\n\n\n\n\\[t = \\frac{\\bar{x}_{1} - \\bar{x}_{2}}{se_{dif}}\\]"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  }
+]

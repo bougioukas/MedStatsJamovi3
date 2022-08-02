@@ -1,0 +1,15 @@
+# Preface {.unnumbered}
+
+This textbook is for medical students, doctors, medical researchers, nurses, members of professions allied to medicine, and all others concerned with medical data.
+
+While statistics books focus on mathematics, this textbook focuses on using a computer to conduct data analysis. That means using a statistical software package, in this case the [R](https://www.r-project.org/) programming language for statistics and graphics. Our aim is to keep a balance between mathematical rigor and readability as well as learning R and statistics simultaneously.
+
+Most of the examples discussed in this textbook are based on scientific studies whose data are publicly available. For each example, we provide the step-by-step application of R. Readers are encouraged to follow these steps while reading the textbook so that they can learn statistics through hands-on experience.
+
+All sections of this textbook are reproducible as they were made using [Quarto](https://quarto.org/)^®^ that includes R code used to produce the figures, tables and results. Quarto^®^ is an open-source scientific and technical publishing system built on [Pandoc](https://pandoc.org/).
+
+To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+## License
+
+This textbook is **free to use**, and is licensed under the [Creative Commons Attribution-NonCommercial-NoDerivs 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/) License.
