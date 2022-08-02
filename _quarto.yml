@@ -2,14 +2,13 @@ project:
   type: book
   output-dir: _book
 book:
-  title: "An Introduction to Medical Statistics with Jamovi"
+  title: "Introduction to Medical Statistics with Jamovi"
   subtitle: "1st Edition"
   author: 
     - "Konstantinos I. Bougioukas, PhD"
-    - "Anna-Bettina Haidich, Associate Professor"
-  date: "July 9, 2022"
+  date: "August 2, 2022"
   cover-image: images/cover3.png
-  repo-url: https://github.com/bougioukas/Med_Stats_R_Quarto_Book
+  repo-url: https://github.com/bougioukas/MedStatsJamovi3
   sharing: [twitter, facebook]
   chapters:
     - index.qmd
