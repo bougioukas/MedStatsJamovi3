@@ -1,0 +1,1 @@
+# LAB VI: Inference for numerical data (2 samples)

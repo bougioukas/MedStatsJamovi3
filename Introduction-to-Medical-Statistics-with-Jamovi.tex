@@ -1,0 +1,462 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+%
+\documentclass[
+  16pt,
+  letterpaper,
+]{scrbook}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+  \setmainfont[]{Roboto}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=0.90in,top = 1.25in,bottom= 1.25in]{geometry}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\setcounter{secnumdepth}{5}
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}\usepackage{longtable,booktabs,array}
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+\usepackage{fontawesome5}
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
+\makeatother
+\makeatletter
+\@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\AtBeginDocument{%
+\ifdefined\contentsname
+  \renewcommand*\contentsname{Table of contents}
+\else
+  \newcommand\contentsname{Table of contents}
+\fi
+\ifdefined\listfigurename
+  \renewcommand*\listfigurename{List of Figures}
+\else
+  \newcommand\listfigurename{List of Figures}
+\fi
+\ifdefined\listtablename
+  \renewcommand*\listtablename{List of Tables}
+\else
+  \newcommand\listtablename{List of Tables}
+\fi
+\ifdefined\figurename
+  \renewcommand*\figurename{Figure}
+\else
+  \newcommand\figurename{Figure}
+\fi
+\ifdefined\tablename
+  \renewcommand*\tablename{Table}
+\else
+  \newcommand\tablename{Table}
+\fi
+}
+\@ifpackageloaded{float}{}{\usepackage{float}}
+\floatstyle{ruled}
+\@ifundefined{c@chapter}{\newfloat{codelisting}{h}{lop}}{\newfloat{codelisting}{h}{lop}[chapter]}
+\floatname{codelisting}{Listing}
+\newcommand*\listoflistings{\listof{codelisting}{List of Listings}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{caption}{}{\usepackage{caption}}
+\@ifpackageloaded{subcaption}{}{\usepackage{subcaption}}
+\makeatother
+\makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[many]{tcolorbox}}
+\makeatother
+\makeatletter
+\@ifundefined{shadecolor}{\definecolor{shadecolor}{rgb}{.97, .97, .97}}
+\makeatother
+\makeatletter
+\makeatother
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={Introduction to Medical Statistics with Jamovi},
+  pdfauthor={Konstantinos I. Bougioukas, PhD},
+  colorlinks=true,
+  linkcolor={blue},
+  filecolor={red},
+  citecolor={green},
+  urlcolor={blue},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Introduction to Medical Statistics with Jamovi}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{1st Edition}
+\author{Konstantinos I. Bougioukas, PhD}
+\date{August 2, 2022}
+
+\begin{document}
+\frontmatter
+\maketitle
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[interior hidden, frame hidden, boxrule=0pt, borderline west={3pt}{0pt}{shadecolor}, breakable, sharp corners, enhanced]}{\end{tcolorbox}}\fi
+
+\renewcommand*\contentsname{Table of contents}
+{
+\hypersetup{linkcolor=gray}
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\listoffigures
+\listoftables
+\setstretch{1.4}
+\mainmatter
+\bookmarksetup{startatroot}
+
+\hypertarget{preface}{%
+\chapter*{Preface}\label{preface}}
+\addcontentsline{toc}{chapter}{Preface}
+
+This textbook is for medical students, doctors, medical researchers,
+nurses, members of professions allied to medicine, and all others
+concerned with medical data.
+
+While statistics books focus on mathematics, this textbook focuses on
+using a computer to conduct data analysis. That means using a
+statistical software program, in this case the
+\href{https://www.jamovi.org/}{Jamovi} software for statistics and
+graphics. Our aim is to keep a balance between mathematical rigor and
+readability as well as learning Jamovi and statistics simultaneously.
+
+Most of the examples discussed in this textbook are based on scientific
+studies whose data are publicly available. For each example, we provide
+the step-by-step application in Jamovi. Readers are encouraged to follow
+these steps while reading the textbook so that they can learn statistics
+through hands-on experience.
+
+All sections of this textbook are reproducible as they were made using
+\href{https://quarto.org/}{Quarto}\textsuperscript{®} which is an
+open-source scientific and technical publishing system built on
+\href{https://pandoc.org/}{Pandoc}.
+
+To learn more about Quarto books visit
+\url{https://quarto.org/docs/books}.
+
+\hypertarget{license}{%
+\section*{License}\label{license}}
+\addcontentsline{toc}{section}{License}
+
+This textbook is \textbf{free to use}, and is licensed under the
+\href{https://creativecommons.org/licenses/by-nc-nd/4.0/}{Creative
+Commons Attribution-NonCommercial-NoDerivs 4.0} License.
+
+\bookmarksetup{startatroot}
+
+\hypertarget{introduction}{%
+\chapter{Introduction}\label{introduction}}
+
+\hypertarget{statistics-and-medicine}{%
+\section{Statistics and Medicine}\label{statistics-and-medicine}}
+
+Although some healthcare professionals may not carry out medical
+research, they will definitely be consumers of medical research. Thus,
+it is incumbent on them to be able to discern high quality research
+studies from low quality, to be able to verify whether the conclusions
+of a study are valid and to understand the limitations in methods of a
+study. The current emphasis on evidence-based medicine (EBM) requires
+that healthcare professionals consider critically all evidence about
+whether a specific treatment works and this requires basic statistical
+knowledge.
+
+Statistics is not only a discipline in its own right but it is also a
+fundamental tool for investigation in all biological and medical
+sciences. As such, any serious investigator in these fields must have a
+grasp of the basic principles. With modern computer facilities there is
+little need for familiarity with the technical details of statistical
+calculations. However, a healthcare professional should understand when
+such calculations are valid, when they are not and how they should be
+interpreted.
+
+The use of statistical methods pervades the medical literature. In a
+survey of 350 original articles published in three UK journals of
+general practice: \emph{British Medical Journal (General Practice
+Section)}, \emph{British Journal of General Practice} and \emph{Family
+Practice}, over a one-year period, Rigby et al.~(2004) found that 66\%
+used some form of statistical analysis. Another review by Strasak et
+al.~(2007) of 91 original research articles published in \emph{The New
+England Journal of Medicine} (one of the prestigious peer-reviewed
+medical journals) found an even higher percentage (95\%) of using
+inferential statistics, for example, hypothesis testing and deriving
+estimates. It appears, therefore, that the majority of papers published
+in these journals require some statistical knowledge for a complete
+understanding.
+
+To students schooled in the `hard' sciences of physics and chemistry it
+may be difficult to appreciate the variability of biological data. If
+one repeatedly puts blue litmus paper into acid solutions it turns red
+100\% of the time, not most (say 95\%) of the time. In contrast, if one
+gives aspirin to a group of people with headaches, not all of them will
+experience relief. Penicillin was perhaps one of the few `miracle' cures
+where the results were so dramatic that little evaluation was required.
+Absolute certainty in medicine is rare.
+
+Measurements on human subjects seldom give exactly the same results from
+one occasion to the next. For example, O' Sullivan et al (1999), found
+that systolic blood pressure (SBP) in normal healthy children has a wide
+range, with 95\% of children having SBPs below 130 mmHg when they were
+resting, rising to 160 mmHg during the school day, and falling again to
+below 130 mmHg at night. Furthermore, Hansen et al.~(2010) in a study of
+over 8000 subjects found that increasing variability in blood pressure
+over 24 hours was a significant and independent predictor of mortality
+and a cardiovascular and stroke events.
+
+This variability is also inherent in responses to biological hazards.
+Most people now accept that cigarette smoking causes lung cancer and
+heart disease, and yet nearly everyone can point to an apparently
+healthy 80-year-old who has smoked for many years without apparent ill
+effect. Although it is now known from the report of Doll et al (2004)
+that about half of all persistent cigarette smokers are killed by their
+habit, it is usually forgotten that until the 1950s, the cause of the
+rise in lung cancer deaths was a mystery and commonly associated with
+general atmospheric pollution such as the exhaust fumes of cars. It was
+not until the carefully designed and statistically analysed
+case--control and cohort studies of Richard Doll and Austin Bradford
+Hill and others, that smoking was identified as the true cause. Enstrom
+et al.~(2003) moved the debate on to ask whether or not passive smoking
+causes lung cancer. This is a more difficult question to answer since
+the association is weaker. However, studies by Cao et al.~(2015) have
+now shown that it is a major health problem and scientists at the
+International Agency for Rsearch on Cancer (IARC) have concluded that
+there is sufficient evidence that second-hand smoke causes lung cancer
+(IARC 2012). Restrictions on smoking in public places have been imposed
+to smokers.
+
+With such variability, it follows that in any comparison made in a
+medical context, such as people on different treatments, differences are
+almost bound to occur. These differences may be due to real effects,
+random variation or variation in some other factor that may affect an
+outcome. It is the job of the analyst to decide how much variation
+should be ascribed to chance or other factors, so that any remaining
+variation can be assumed to be due to a real effect. This is the art of
+statistics.
+
+\hypertarget{why-jamovi}{%
+\section{Why Jamovi?}\label{why-jamovi}}
+
+Jamovi is a new fee open ``3rd generation'' statistical software that is
+built on top of the programming language R, which has become extremely
+popular among data scientists during the last two decades. Designed from
+the ground up to be easy to use, Jamovi is a compelling alternative to
+costly statistical products such as SPSS and SAS.
+
+Some other advantages are:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  A user guide and community resources from the jamovi website
+\item
+  Integration with R
+\item
+  It provides informative tables and neat visuals.
+\end{enumerate}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{sampling-methods-and-study-designs}{%
+\chapter{Sampling methods and study
+designs}\label{sampling-methods-and-study-designs}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{probability-and-distributions}{%
+\chapter{Probability and
+distributions}\label{probability-and-distributions}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{normal-distribution}{%
+\chapter{Normal distribution}\label{normal-distribution}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{foundations-for-statistical-inference}{%
+\chapter{Foundations for statistical
+inference}\label{foundations-for-statistical-inference}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{inference-for-numerical-data-2-samples}{%
+\chapter{Inference for numerical data: 2
+samples}\label{inference-for-numerical-data-2-samples}}
+
+Two sample t-test (Student's t-test) can be used if we have two
+independent (unrelated) groups (eg., males-females, unmatched
+case-controls, treatment-non treatment) and one quantitative variable of
+interest (e.g., age, weight, systolic blood pressure). For example, we
+may want to compare the age in males and females or the weights in two
+groups of children, each child being randomly allocated to receive
+either a dietary supplement or placebo.
+
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, bottomrule=.15mm, titlerule=0mm, colback=white, leftrule=.75mm, breakable, colframe=quarto-callout-warning-color-frame, bottomtitle=1mm, colbacktitle=quarto-callout-warning-color!10!white, toprule=.15mm, left=2mm, opacityback=0, coltitle=black, arc=.35mm, title={\textbf{Assumptions for conducting a Student's t-test}}, rightrule=.15mm, toptitle=1mm]
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  The groups are independent
+\item
+  The outcome of interest is continuous
+\item
+  The data is normally distributed in both groups
+\item
+  The data in both groups have similar standard deviations
+\end{enumerate}
+
+\end{tcolorbox}
+
+\[t = \frac{\bar{x}_{1} - \bar{x}_{2}}{se_{dif}}\]
+
+\bookmarksetup{startatroot}
+
+\hypertarget{inference-for-numerical-data-2-samples-1}{%
+\chapter{Inference for numerical data: \textgreater2
+samples}\label{inference-for-numerical-data-2-samples-1}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{inference-for-categorical-data}{%
+\chapter{Inference for categorical
+data}\label{inference-for-categorical-data}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{correlation}{%
+\chapter{Correlation}\label{correlation}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{simple-linear-regression}{%
+\chapter{Simple linear regression}\label{simple-linear-regression}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{reporting-the-results-of-statistical-analysis}{%
+\chapter{Reporting the results of statistical
+analysis}\label{reporting-the-results-of-statistical-analysis}}
+
+\bookmarksetup{startatroot}
+
+\hypertarget{references}{%
+\chapter*{References}\label{references}}
+\addcontentsline{toc}{chapter}{References}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{0}{0}
+\end{CSLReferences}
+
+
+\backmatter
+
+\end{document}

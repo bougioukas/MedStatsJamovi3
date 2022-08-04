@@ -1,0 +1,1 @@
+# LAB VIII: Inference for categorical data

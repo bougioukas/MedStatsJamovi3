@@ -13,17 +13,28 @@ book:
   chapters:
     - index.qmd
     - introduction.qmd
+    - lab1.qmd
     - study_designs.qmd
+    - lab2.qmd
     - probability.qmd
+    - lab3.qmd
     - normal.qmd
+    - lab4.qmd
     - inference.qmd
+    - lab5.qmd
     - two_samples.qmd
+    - lab6.qmd
     - more_samples.qmd
+    - lab7.qmd
     - categorical.qmd
+    - lab8.qmd
     - correlation.qmd
+    - lab9.qmd
     - linear.qmd
+    - lab10.qmd
     - reporting.qmd
     - references.qmd
+    
   number-depth: 2
   page-footer: 
     left: "Copyright 2022, Konstantinos I. Bougioukas" 
@@ -46,8 +57,9 @@ format:
     lof: true
     lot: true
     linestretch: 1.4
-    fontsize: 16pt
+    fontsize: 14pt
     mainfont: "Roboto"
+    fig-pos: 'ht'
     toc-depth: 2
     geometry: 
       - margin=0.90in
@@ -56,6 +68,6 @@ format:
     include-in-header: 
       text: |   
         \usepackage{fontawesome5}
-        
+        \raggedbottom
 editor: visual
 
