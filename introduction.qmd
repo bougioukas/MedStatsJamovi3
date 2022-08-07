@@ -1,4 +1,4 @@
-# Introduction
+# Introduction {#sec-introduction}
 
 ```{mermaid}
 %%| column: screen-inset-right
@@ -29,7 +29,7 @@ With such variability, it follows that in any comparison made in a medical conte
 
 Jamovi is a new fee open "3rd generation" statistical software that is built on top of the programming language R (@fig-jamovi_0). Designed from the ground up to be easy to use, Jamovi is a compelling alternative to costly statistical products such as SPSS and SAS.
 
-![Jamovi is free and open statistical software to bridge the gap between researcher and statistician](images/jamovi_0.png){#fig-jamovi_0}
+![Jamovi is free and open statistical software](images/jamovi_0.png){#fig-jamovi_0}
 
 ::: {.callout-note icon="false"}
 ## **Some other advantages are:**
@@ -48,7 +48,7 @@ Data can be either categorical or numerical (otherwise known as qualitative and 
 ::: {.callout-note icon="false"}
 ## **Example from the literature - Salicylic acid plasters for treatment of foot corns**
 
-@tbl-corn presents a typical table with basic characteristics of a set of patients entered into a randomized controlled trial (RCT) that investigated the effectiveness of salicylic acid plasters compared with usual scalpel debridement for treatment of foot corns (Farndon et al. 2013). Corns and calluses are areas of hard, thickened skin that develop when the skin is exposed to excessive pressure or friction. They commonly occur on the feet and can cause pain and discomfort when you walk.
+@tbl-corn presents a typical table with basic characteristics of a set of patients entered into a randomized controlled trial (RCT) that investigated the effectiveness of salicylic acid plasters compared with usual scalpel debridement for treatment of foot corns [@farndon2013]. Corns and calluses are areas of hard, thickened skin that develop when the skin is exposed to excessive pressure or friction. They commonly occur on the feet and can cause pain and discomfort when you walk.
 :::
 
 \vspace{20pt}
@@ -107,7 +107,7 @@ Data can be either categorical or numerical (otherwise known as qualitative and 
 | **median (IQR)**     |                 |                     |                   |
 +----------------------+-----------------+---------------------+-------------------+
 
-: Baseline characteristics of participants in a RCT of the effectiveness of salicylic acid plasters compared with "usual" scalpel debridement of foot corns by treatment group {#tbl-corn}
+: Baseline characteristics of patients with foot corns by treatment group. [@farndon2013] {#tbl-corn}
 
 In this example since we have 101 patients in each randomized group the percentages are almost the same as the raw counts. However, for most studies we are unlikely to have exactly 100 participants in each group!
 
@@ -176,7 +176,7 @@ For simplicity, it is often the case in medicine that continuous data are dichot
 
 \vspace{15pt}
 
-One can also divide a continuous variable into more than two groups. For example, we could divide age into age bands of equal lengths of, say 10 years such as: 0-9, 10-19, 20-29, etc. When categorizing continuous data authors should give an indication as to why they chose these cutt-off points, and a reader has to be very wary to guard against the fact that the cuts may be chosen to make a particular point. Some statisticians have termed the habit of categorizing continuous variables as "dichotomania", which they regard as poor practice since it loses information and assumes a discontinuous relationship that is unlikely in nature.
+One can also divide a continuous variable into more than two groups. For example, we could divide age into age bands of equal lengths of, say 10 years such as: 0-9, 10-19, 20-29, etc. When categorizing continuous data authors should give an indication as to why they chose these cut-off points, and a reader has to be very wary to guard against the fact that the cuts may be chosen to make a particular point. Some statisticians have termed the habit of categorizing continuous variables as "dichotomania", which they regard as poor practice since it loses information and assumes a discontinuous relationship that is unlikely in nature.
 :::
 
 \vspace{20pt}
@@ -201,11 +201,10 @@ Binary data are the simplest type of data. Each individual has a label which tak
 
 However, a raw count is rarely useful. For example, in @tbl-corn there are more non-smokers in the scalpel group (40 out of 99 or 40%) compared to corn plaster group (34 out of 98 or 35%). It is only when this count is expressed as a proportion (relative frequency) that it becomes useful. Hence the first step to analyzing categorical data is to count the number of observations in each category (frequencies) and express them as **proportions** of the total sample size (relative frequencies).
 
-
 ::: {.callout-note icon="false"}
 ## **Illustrative Example - Salicylic acid plasters for treatment of foot corns**
 
-Farndon et al. (2013) reports a RCT that investigated the effectiveness of salicylic acid plasters compared with usual scalpel debridement for treatment of foot corns. As we have already mentioned one categorical variable recorded was the centre where each trial participant was treated. Trial participants were treated at one of seven centers and the corresponding categories as displayed in @tbl-centers1. The first column shows category (treatment center) names, whilst the second shows the number of individuals in each category together with its percentage contribution to the total. @tbl-centers1 clearly shows that the majority (54.5%) of patients were treated at the "Central" treatment center.
+Farndon et al. (2013) reports a RCT that investigated the effectiveness of salicylic acid plasters compared with usual scalpel debridement for treatment of foot corns. As we have already mentioned one categorical variable recorded was the center where each trial participant was treated. Trial participants were treated at one of seven centers and the corresponding categories as displayed in @tbl-centers1. The first column shows category (treatment center) names, whilst the second shows the number of individuals in each category together with its percentage contribution to the total. @tbl-centers1 clearly shows that the majority (54.5%) of patients were treated at the "Central" treatment center.
 
 \vspace{15pt}
 
@@ -223,33 +222,22 @@ In addition to tabulating each variable separately, we might be interested in wh
 | Darnall          | 6         | 3.0%       |
 | **Total**        | 202       | 100.0%     |
 
-: Treatment center for 202 patients with corns who were recruited to a RCT {#tbl-centers1}
+: Frequency and percentage distributions of treatment center among 202 patients with corns [@farndon2013] {#tbl-centers1}
 
-+----------------+--------------------+----------------+---------------+
-|                | Corn plaster, n(%) | Scalpel, n(%)  | All, n(%)     |
-+================+====================+================+===============+
-|                |                    |                |               |
-+----------------+--------------------+----------------+---------------+
-| Central        | 58 (57)            | 52 (52)        | 110 (54.5)    |
-+----------------+--------------------+----------------+---------------+
-| Manor          | 13 (13)            | 20 (20)        | 33 (16.3)     |
-+----------------+--------------------+----------------+---------------+
-| Jordanthorpe   | 10 (10)            | 14 (14)        | 24 (11.9)     |
-+----------------+--------------------+----------------+---------------+
-| Limbrick       | 3 (3)              | 6 (6)          | 9 (4.5)       |
-+----------------+--------------------+----------------+---------------+
-| Firth Park     | 7 (7)              | 4 (4)          | 11 (5.4)      |
-+----------------+--------------------+----------------+---------------+
-| Huddersfield   | 5 (5)              | 4 (4)          | 9 (4.5)       |
-+----------------+--------------------+----------------+---------------+
-| Darnall        | 5 (5)              | 1 (1)          | 6 (3.0)       |
-+----------------+--------------------+----------------+---------------+
-| **Total**      | 101 (100)          | 101 (100)      | 202 (100)     |
-+----------------+--------------------+----------------+---------------+
-|                |                    |                |               |
-+----------------+--------------------+----------------+---------------+
+|              | Corn plaster, n(%) | Scalpel, n(%) | All, n(%)  |
+|--------------|--------------------|---------------|------------|
+|              |                    |               |            |
+| Central      | 58 (57)            | 52 (52)       | 110 (54.5) |
+| Manor        | 13 (13)            | 20 (20)       | 33 (16.3)  |
+| Jordanthorpe | 10 (10)            | 14 (14)       | 24 (11.9)  |
+| Limbrick     | 3 (3)              | 6 (6)         | 9 (4.5)    |
+| Firth Park   | 7 (7)              | 4 (4)         | 11 (5.4)   |
+| Huddersfield | 5 (5)              | 4 (4)         | 9 (4.5)    |
+| Darnall      | 5 (5)              | 1 (1)         | 6 (3.0)    |
+| **Total**    | 101 (100)          | 101 (100)     | 202 (100)  |
+|              |                    |               |            |
 
-: Cross-tabulation of treatment center by randomized group for 202 patients with corns {#tbl-centers2}
+: Cross-tabulation of treatment center by randomized group for 202 patients with corns [@farndon2013] {#tbl-centers2}
 
 \vspace{20pt}
 
@@ -291,21 +279,28 @@ In addition to tabulating each variable separately, we might be interested in wh
 
 ## Displaying Categorical Data
 
-The best way to investigate a dataset is of course to plot it. For categorical variables, such as gender and treatment center, it is straightforward to present the number in each category, usually indicating the frequency and percentage of the total number of patients. When shown graphically this is called a bar plot. @fig-barplot1 shows in a **bar plot** the reqruiting centers of the 202 patients with foot corns treated in the trial of Farndon et al. (2013). Along the horizontal axis (x-axis) are the different treatment center categories whilst on the vertical axis (y-axis) is the percentage. Each bar represents the percentage of the total patients in that category. For example, it can be seen that the percentage of participants who were treated in the "Central" center was about 55%.
+While frequency tables are extremely useful, the best way to investigate a data set is to plot it. For categorical variables, such as gender and treatment center, it is straightforward to present the number in each category, usually indicating the frequency and percentage of the total number of patients. When shown graphically this is called a **bar plot**.
 
+**A. Simple Bar Plot**
+
+A simple bar plot is an easy way to make comparisons across categories. @fig-barplot1 shows the centers where 202 patients with foot corns were treated in the trial of @farndon2013. Along the horizontal axis (x-axis) are the different treatment centers whilst on the vertical axis (y-axis) is the percentage. The height of each bar represents the percentage of the total patients in that category. For example, it can be seen that the percentage of participants who were treated in the "Central" center was about 55%.
 
 ```{r}
 #| include = F
 
 library(tidyverse)
-library(scales)
-library(readr)
-corn <- read_csv("data/corn.csv")
+library(here)
 
-dat <- corn %>% 
+
+library(scales)
+
+library(readr)
+dat_corn <- read_csv(here("data", "dat_corn.csv"))
+
+dat_corn <- dat_corn %>% 
  mutate(group = factor(group, levels = c(1, 2), 
                               labels=c('scalpel', 'corn plaster')),
-        centre_a = factor(centre_a, levels = c(1, 2, 3, 4, 5,  9,  11 ),
+        center = factor(center, levels = c(1, 2, 3, 4, 5,  9,  11 ),
                           labels = c('Central', 'Manor', 'Jordanthorpe', 'Limbrick',
                                      'First Park', 'Huddersfield', 'Darnall')),
         gender = factor(gender, levels = c(1, 2), 
@@ -317,17 +312,17 @@ dat <- corn %>%
 ```{r}
 #| echo: false
 #| label: fig-barplot1
-#| fig-cap: Bar plot showing where 202 patients with corns were treated.
+#| fig-cap: Bar plot showing where 202 patients with corns were treated [@farndon2013].
 #| fig.width: 7
 
-centres <- dat %>% 
-  count(centre_a) %>% 
-  mutate(percent = n / sum(n))
+dat_centers <- dat_corn %>% 
+  count(center) %>% 
+  mutate(pct = n / sum(n))
 
 
-ggplot(centres, aes(x = centre_a, y = percent)) +
+ggplot(dat_centers, aes(x = center, y = pct)) +
   geom_col(width=0.65, fill = "steelblue4") +
-  geom_text(aes(label=paste0(round(percent*100, 1), "%")),
+  geom_text(aes(label=paste0(round(pct*100, 1), "%")),
             vjust=1.6, color = "white", size = 3) +
   labs(x = "Treatment center", y = "Percent",
        subtitle = "Number of patients: 202") +
@@ -339,27 +334,38 @@ ggplot(centres, aes(x = centre_a, y = percent)) +
   )
 ```
 
+::: {.callout-note icon="false"}
+## **Basic Properties of Simple Bar plot**
 
+-   All rectangular bars should have equal width and should have equal space between them.
 
-If the sample is further classified into whether the patient was treated with corn plasters or scalpel then it becomes impossible to present the data as a single bar plot. We could present the data as a side by side bar plot (see @fig-barplot2) but is preferable to present the data in one graph with the same scales and axes to make the visual comparisons easier (clustered or grouped bar plot) (see @fig-barplot3).
+-   The rectangular bars can be drawn horizontally or vertically.
 
+-   The height of the rectangular bar is equivalent to the data they represent.
+
+-   The rectangular bars must be plotted against a common zero-valued baseline.
+:::
+
+**B. Side-by-side and Grouped Bar Plots**
+
+If the sample is further classified into whether the patient was treated with corn plasters or scalpel then it becomes impossible to present the data as a single bar plot. We could present the data as a side by side bar plot (see @fig-barplot2) but is preferable to present the data in one graph with the same scales and axes to make the visual comparisons easier (grouped bar plot) (see @fig-barplot3).
 
 ```{r}
 #| echo: false
 #| label: fig-barplot2
-#| fig-cap: Clustered bar plot showing where 202 patients with corns were treated by randomized group.
+#| fig-cap: Side-by-side bar plot showing where 202 patients with corns were treated by randomized group [@farndon2013].
 #| fig.width: 9.5
+#| fig.height: 5
 
-
-centres2 <- dat %>% 
-  count(centre_a, group) %>% 
+dat_centers2 <- dat_corn %>% 
+  count(center, group) %>% 
   group_by(group) %>% 
   mutate(pct = n / sum(n))
 
 
-ggplot(centres2) + 
-  geom_col(aes(centre_a, pct, fill = group), width=0.7, position = "dodge") +
-  geom_text(aes(centre_a, pct, label = paste0(round(pct*100, 0), "%"), 
+ggplot(dat_centers2) + 
+  geom_col(aes(center, pct, fill = group), width=0.7, position = "dodge") +
+  geom_text(aes(center, pct, label = paste0(round(pct*100, 0), "%"), 
                 group = group), color = "white", size = 3,vjust=1.2,
             position = position_dodge(width = .9)) +
 labs(x = "Treatment center", y = "Percent",
@@ -377,20 +383,16 @@ labs(x = "Treatment center", y = "Percent",
 
 ```
 
-
-
-
-
-
 ```{r}
 #| echo: false
 #| label: fig-barplot3
-#| fig-cap: Clustered bar plot showing where 202 patients with corns were treated by randomized group.
+#| fig-cap: Grouped bar plot showing where 202 patients with corns were treated by randomized group [@farndon2013].
 #| fig.width: 9
-
-ggplot(centres2) + 
-  geom_col(aes(centre_a, pct, fill = group), width = 0.8, position = "dodge") +
-  geom_text(aes(centre_a, pct, label = paste0(round(pct*100, 0), "%"), 
+#| fig.height: 5
+#| 
+ggplot(dat_centers2) + 
+  geom_col(aes(center, pct, fill = group), width = 0.8, position = "dodge") +
+  geom_text(aes(center, pct, label = paste0(round(pct*100, 0), "%"), 
                 group = group), color = "white", size = 3,vjust=1.2,
             position = position_dodge(width = .9)) +
 labs(x = "Treatment center", y = "Percent",
@@ -405,39 +407,255 @@ labs(x = "Treatment center", y = "Percent",
 
 ```
 
+::: callout-tip
+**Report the actual total sample sizes for each group**
 
-If you do use the relative frequency scale as we have, then it is recommended to report the actual total sample sizes for each group (e.g., in the legend or caption). In this way, given the total sample size and relative frequency (from the height of the bars) we can work out the actual numbers treated in each center.
+If we do use the relative frequency scale as we have, then it is recommended to report the actual total sample sizes for each group (e.g., in the legend or caption). In this way, given the total sample size and relative frequency (from the height of the bars) we can work out the actual numbers treated in each center.
+:::
+
+\vspace{15pt}
+
+**C. Stacked Bar Plot**
+
+Unlike a side-by-side or grouped graphs, **Stacked Bar Plots** segment their bars. A **100% Stack Bar Plot** shows the percentage-of-the-whole of each group and are plotted by the percentage of each value to the total amount in each group. This makes it easier to see if relative differences exist between quantities in each group (see @fig-stacked).
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: fig-stacked
+#| fig-cap: A horizontal 100% stacked bar plot showing the distribution of gender by randomized group [@farndon2013].
+#| fig.width: 7
+#| fig.height: 2
+
+dat_stacked <- dat_corn%>% 
+  group_by(group) %>% 
+  count(gender) %>% 
+  mutate(pct = n / sum(n))
 
 
+ggplot(dat_stacked, aes(x = group, y = pct, fill = gender))+
+  geom_bar(stat = "identity")+
+  geom_text(aes(label = paste0(round(pct*100, 0), "%"), y = pct), 
+            position = position_stack(vjust = 0.5))+
+  coord_flip()+
+  ggsci::scale_fill_simpsons() +
+  scale_y_continuous(labels = scales::percent)+
+  labs(x = "Gender", y = "Percent", fill = "Gender") +
+  theme_minimal() +
+  theme(
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 12),
+    axis.title=element_text(size = 12),
+    axis.text=element_text(size = 12)
+  )
 
+```
+
+In @fig-stacked the bars are divided into two segments only (i.e., female and male) so it is easy to read the values of each segment and to compare a specific segment through the entire set of bars (in our case the percentages are equal). This comparison can be easily made because each segment is aligned through the entire set of bars (female to the left and men to the right). If more segments were added, however, the segments in the middle would not be aligned to the left or right, which would make comparisons difficult (see @fig-stacked2).
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: fig-stacked2
+#| fig-cap: A horizontal 100% stacked bar plot showing the distribution of treatment centers by randomized group [@farndon2013].
+#| fig.width: 11.5
+#| fig.height: 2.5
+
+dat_stacked2 <- dat_corn%>% 
+  group_by(group) %>% 
+  count(center) %>% 
+  mutate(pct = n / sum(n))
+
+
+ggplot(dat_stacked2, aes(x = group, y = pct, fill = center))+
+  geom_bar(stat = "identity")+
+  geom_text(aes(label = paste0(round(pct*100, 0), "%"), y = pct), 
+            position = position_stack(vjust = 0.5))+
+  coord_flip()+
+  ggsci::scale_fill_simpsons() +
+  scale_y_continuous(labels = scales::percent)+
+  labs(x = "Gender", y = "Percent", fill = "Treatment Center") +
+  theme_minimal() +
+  theme(
+    legend.title = element_text(size = 12),
+    legend.text = element_text(size = 12),
+    axis.title=element_text(size = 12),
+    axis.text=element_text(size = 12)
+  )
+
+```
+
+::: callout-warning
+**Stacked bar plots tend to become confusing when the variable has many levels**
+
+One issue to consider when using stacked bar plots is the number of variable levels: when dealing with many categories, stacked bar plots tend to become rather confusing.
+:::
 
 ## Summarizing Numerical Data
 
-A quantitative measurement contains more information than a categorical
-one, and so summarizing these data is more complex. One chooses summary
-statistics to condense a large amount of information into a few intelligible numbers, the sort that could be communicated verbally. The two most important pieces of information about a quantitative measurement are **‘where is it?’** and **‘how variable is it?’** These are categorized as **measures of location** (or sometimes ‘central tendency’) and **measures of spread** or variability.
-
-
+A quantitative measurement contains more information than a categorical one, and so summarizing these data is more complex. One chooses summary statistics to condense a large amount of information into a few intelligible numbers, the sort that could be communicated verbally. The two most important pieces of information about a quantitative measurement are **'where is it?'** and **'how variable is it?'** These are categorized as **measures of location** (or sometimes 'central tendency') and **measures of spread** or variability.
 
 ::: {.callout-note icon="false"}
 ## **Two summary measures should be reported for a numerical variable**
 
 A measure of **location** (where the center of the distribution of the values is located) and **variability** (how widely the values are spread above and below the central value) provides an informative but brief summary of a set of observations.
+:::
+
+\vspace{15pt}
+
+### Measures of Location
+
+**A. Sample Mean or Average**
+
+Let $x_1, x_2,...,x_{n-1}, x_n$ be a set of *n* measurements. The arithmetic sample mean or average, $\bar{x}$ (pronounced x bar), is simply the sum of the observations divided by their number *n*, thus:
+
+$$
+\bar{x}= \frac{Sum \ of \ all \ sample \ values }{Size \ of \ sample}= \frac{x_1 + x_2 + ... + x_{n-1} + x_n}{n}
+$$
+
+This formula is entirely correct, but it's too long, so we make use of the ***summation symbol*** $\scriptstyle\sum$ to shorten it:
+
+$$\bar{x}=\frac{\sum_{i=1}^{n}x_{i}}{n}=\frac{1}{n}\sum_{i=1}^{n}x_{i}$$
+
+In the above equation, $x_{i}$ represents the individual sample values and ${\sum_{i=1}^{n}x_{i}}$ their sum. The Greek letter ${\Sigma}$ (sigma) is the Greek capital 'S' and stands for 'sum' and simply means 'add up the *n* observations $x_{i}$ from the 1st to the last (nth)'.
+
+Usually, we cannot measure the population mean ${\mu}$, which is the unknown constant that we want to estimate using the sample mean $\bar{x}$.
+
+```{r}
+#| include = F
+x <- c(2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3)
+
+x2 <- c(2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 100, 3)
+
+```
+
+\vspace{20pt}
+
+::: {.callout-note icon="false"}
+## **Example: Calculation of the Mean - Corn size data (mm)**
+
+In the RCT by @farndon2013, the baseline size of the corn (as its widest diameter in mm) was measured by a podiatrist (foot specialist). Consider the following 16 baseline corn sizes selected from the patients:
+
+2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3
+
+\vspace{15pt}
+
+The sum of these 16 observations is: $(2 + 2 + 6 + 3 + 4 + 2 + 2 + 5 + 3 + 4 + 1 + 2 + 6 + 3 + 10 + 3)$ = `r sum(x)`
+
+\vspace{15pt}
+
+Thus, the arithmetic mean is:
+
+$\bar{x}$ = `r sum(x)`/`r length(x)` = `r mean(x)` mm or `r round(mean(x), digits = 1)` mm. It is usual to report one more decimal place for the mean than the data recorded.
+:::
+
+\vspace{20pt}
+
+The major advantage of the mean is that it uses all the data values, while the main disadvantage is its sensitivity very large or very small values, which might be **outliers** (unusual values). For example, if we entered "100 mm" instead of "10 mm", for the 15th patient, in the calculation of the mean, we would find the mean changed from `r round(mean(x), digits = 1)` to `r round(mean(x2), digits = 1)`. It does not necessarily follow, however, that outliers should be excluded from the final data summary, or that they result from a human error. Outliers can be legitimate anomalies that are vital for capturing information on the subject of interest.
+
+If the data are binary and are coded 0 or 1, then $\bar{x}$ is the proportion of individuals with value 1, and this can also be expressed as a percentage. In @farndon2013 data, the corn had healed or resolved by a three-month follow-up in 52 out of 189 patients. In the data set the cases in which the corn was healed are coded as '1s' and the cases in which the corn was not healed as '0s', so the mean of this variable is `r round(mean(dat_corn$complete_healed, na.rm=T), digits = 3)` or `r round(mean(dat_corn$complete_healed, na.rm=T), digits = 2)*100`%.
+
+\vspace{20pt}
+
+::: {.callout-note icon="false"}
+## **Advantages and Disadvantages of arithmetic mean**
+
+**Advantages of mean**
+
+1.  is simple to understand and easy to calculate
+2.  uses all the data values in the calculation
+3.  is algebraically defined and thus mathematically manageable
+4.  has a known sampling distribution
+
+\vspace{15pt}
+
+**Disadvantages of mean**
+
+1.  is highly affected by the presence of a few abnormally high or abnormally low values (outliers)
+2.  is not an appropriate average for highly skewed (asymmetrical) distributions
+3.  cannot be determined if any item of observation is missing
+4.  cannot be determined easily by inspection of the data
+:::
+
+
+\vspace{20pt}
+
+**B. Median**
+
+The **sample median** is an alternative measure of location, which is less sensitive to outliers. For observed values $x_1, x_2,...,x_{n-1}, x_n$ the median is calculated by first sorting the observed values (i.e., arranging them in an ascending/descending order) and selecting the middle one. If the sample size *n* is **odd**, the median is the number at the middle of the sorted observations. If the sample size is **even**, the median is the average of the two middle numbers.
+
+
+
+::: {.callout-note icon="false"} 
+
+## **Example: Calculation of the Median - Corn size data (mm)**
+
+
+- **Even observations**
+
+We have selected 16 baseline corn sizes:
+
+**original data:** 2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3
+
+We arrange the data in an ascending order:
+
+**ordered data:** 1, 2, 2, 2, 2, 2, 3, **3**, **3**, 3, 4, 4, 5, 6, 6, 10
+
+As the number of observations are **even** (n=16), the median is the average of the two middle ordered numbers (the eighth and ninth): (3+3)/2=3 mm.
+
+
+\vspace{15pt}
+- **Odd observations**
+
+Let's say we select an additional 17th subject with corn size of 10 mm, so the data are as following:
+
+**original data:** 2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3, 10
+
+
+We arrange the data in an ascending order:
+
+**ordered data:** 1, 2, 2, 2, 2, 2, 3, 3, **3**, 3, 4, 4, 5, 6, 6, 10, 10
+
+The median would be the 9th ordered observation, which is also 3 mm.
+
+
+\vspace{15pt}
+
+- **Main Advantages and Disadvantages of median**
+
+The median has the advantage that is not affected by outliers, so for example, the median in the data would be unaffected by replacing the largest corn size of 10 mm with 100 mm. However, it does not take into account the precise value of each observation and hence does not use all information available in the data.
 
 :::
 
 
 
+\vspace{20pt}
 
+**C. Mode** 
 
+A third measure of location is termed the **mode**. This is the value that occurs **most frequently**, or, if the data are grouped, the grouping with the highest frequency. It is not used much in statistical analysis, since its value depends on the accuracy with which the data are measured and ignores most of the information; although it may be useful for categorical data to describe the most frequent category. Note that some data sets do not have a mode because each value occurs only once.
 
-### Measures of Location
+However, the expression **'bimodal'** distribution is used to describe a distribution with **two peaks** in it. This can be caused by mixing two or more populations together. For example, height might appear to have a bimodal distribution if one had men and women in the population.
 
-"Center" of a sample
+\vspace{20pt}
+
+::: {.callout-note icon="false"}
+## Example: Calculation of the Mode - Corn size data (mm)
+
+**original data:** **2**, **2**, 6, 3, 4, **2**, **2**, 5, 3, 4, 1, **2**, 6, 3, 10, 3
+
+\vspace{15pt}
+
+In the 16 patients with corns, 5 patients have corn size of 2 mm; thus, the **modal corn size is 2 mm**.
+:::
+
+\vspace{20pt}
+
+## Displaying Numerical Data
+
+The \*\*sample mean\* is calculated as follows:
 
 -   Mean: arithmetic average
-
-$\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_{i}$
 
 Population mean $\mu$ is the long-run average (let $n \rightarrow \infty$ in computing $\bar{x}$) + center of mass of the data (balancing point) + highly influenced by extreme values even if they are highly atypical
 
@@ -445,5 +663,3 @@ Population mean $\mu$ is the long-run average (let $n \rightarrow \infty$ in com
     -   always descriptive
     -   unaffected by extreme values
     -   not a good measure of central tendency when there are heavy ties in the data
-
-## Displaying Numerical Data

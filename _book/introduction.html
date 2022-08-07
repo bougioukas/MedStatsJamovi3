@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.0.37">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Introduction to Medical Statistics with Jamovi - 1&nbsp; Introduction</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./lab1.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script><script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+</head>
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Introduction to Medical Statistics with Jamovi</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://github.com/bougioukas/MedStatsJamovi3" title="Source Code" class="sidebar-tool px-1"><i class="bi bi-github"></i></a>
+    <a href="" title="Share" id="sidebar-tool-dropdown-0" class="sidebar-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-share"></i></a>
+    <ul class="dropdown-menu" aria-labelledby="sidebar-tool-dropdown-0">
+<li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://twitter.com/intent/tweet?url=%7Curl%7C">
+            <i class="bi bi-bi-twitter pe-1"></i>
+          Twitter
+          </a>
+        </li>
+        <li>
+          <a class="dropdown-item sidebar-tools-main-item" href="https://www.facebook.com/sharer/sharer.php?u=%7Curl%7C">
+            <i class="bi bi-bi-facebook pe-1"></i>
+          Facebook
+          </a>
+        </li>
+    </ul>
+</div>
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Preface</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./introduction.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab1.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">LAB I: Introduction to Jamovi (Part I)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./study_designs.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Sampling methods and study designs</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab2.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">LAB II: Introduction to Jamovi (Part II)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./probability.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Probability and distributions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab3.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">LAB III: Probability and distributions</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./normal.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Normal distribution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab4.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">LAB IV: Normal distribution</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./inference.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Foundations for statistical inference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab5.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">LAB V: Foundations for inference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./two_samples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Inference for numerical data: 2 samples</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab6.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">LAB VI: Inference for numerical data (2 samples)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./more_samples.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Inference for numerical data: &gt;2 samples</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab7.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">LAB VII: Inference for numerical data (&gt;2 samples)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./categorical.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Inference for categorical data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab8.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">LAB VIII: Inference for categorical data</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./correlation.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Correlation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab9.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">LAB IX: Correlation</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./linear.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Simple linear regression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./lab10.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">LAB X: Simple linear regression</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./reporting.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Reporting the results of statistical analysis</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc"><h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+<li><a href="#statistics-and-medicine" id="toc-statistics-and-medicine" class="nav-link active" data-scroll-target="#statistics-and-medicine"> <span class="header-section-number">1.1</span> Statistics and Medicine</a></li>
+  <li><a href="#why-jamovi" id="toc-why-jamovi" class="nav-link" data-scroll-target="#why-jamovi"> <span class="header-section-number">1.2</span> Why Jamovi?</a></li>
+  <li>
+<a href="#types-of-data" id="toc-types-of-data" class="nav-link" data-scroll-target="#types-of-data"> <span class="header-section-number">1.3</span> Types of Data</a>
+  <ul class="collapse">
+<li><a href="#categorical-data" id="toc-categorical-data" class="nav-link" data-scroll-target="#categorical-data"> <span class="header-section-number">1.3.1</span> Categorical Data</a></li>
+  <li><a href="#numerical-data" id="toc-numerical-data" class="nav-link" data-scroll-target="#numerical-data"> <span class="header-section-number">1.3.2</span> Numerical Data</a></li>
+  </ul>
+</li>
+  <li><a href="#summarizing-categorical-data" id="toc-summarizing-categorical-data" class="nav-link" data-scroll-target="#summarizing-categorical-data"> <span class="header-section-number">1.4</span> Summarizing Categorical Data</a></li>
+  <li><a href="#displaying-categorical-data" id="toc-displaying-categorical-data" class="nav-link" data-scroll-target="#displaying-categorical-data"> <span class="header-section-number">1.5</span> Displaying Categorical Data</a></li>
+  <li>
+<a href="#summarizing-numerical-data" id="toc-summarizing-numerical-data" class="nav-link" data-scroll-target="#summarizing-numerical-data"> <span class="header-section-number">1.6</span> Summarizing Numerical Data</a>
+  <ul class="collapse">
+<li><a href="#measures-of-location" id="toc-measures-of-location" class="nav-link" data-scroll-target="#measures-of-location"> <span class="header-section-number">1.6.1</span> Measures of Location</a></li>
+  </ul>
+</li>
+  <li><a href="#displaying-numerical-data" id="toc-displaying-numerical-data" class="nav-link" data-scroll-target="#displaying-numerical-data"> <span class="header-section-number">1.7</span> Displaying Numerical Data</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title"><span id="sec-introduction" class="quarto-section-identifier d-none d-lg-block"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    
+  </div>
+  
+
+</header><div class="cell page-columns page-full" data-fig-width="9">
+<div class="cell-output-display column-screen-inset-right">
+<div>
+<p>
+</p>
+<pre class="mermaid" data-tooltip-selector="#mermaid-tooltip-1">flowchart LR
+Q[Research<br>Question] --&gt; M[Measurements] --&gt; D[Design] --&gt; Ac[Data<br>Acquisition] --&gt; Des[Description] --&gt; A[Analysis] --&gt; I[Interpretation] &amp; Pred[Prediction]
+Pred --&gt; V[Validation]
+I --&gt; K[New Knowledge] &amp; Dec[Decisions]
+</pre>
+<div id="mermaid-tooltip-1" class="mermaidTooltip">
+
+</div>
+
+</div>
+</div>
+</div>
+<section id="statistics-and-medicine" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="statistics-and-medicine">
+<span class="header-section-number">1.1</span> Statistics and Medicine</h2>
+<p>Although some healthcare professionals may not carry out medical research, they will definitely be consumers of medical research. Thus, it is incumbent on them to be able to discern high quality research studies from low quality, to be able to verify whether the conclusions of a study are valid and to understand the limitations in methods of a study. The current emphasis on evidence-based medicine (EBM) requires that healthcare professionals consider critically all evidence about whether a specific treatment works and this requires basic statistical knowledge.</p>
+<p>Statistics is not only a discipline in its own right but it is also a fundamental tool for investigation in all biological and medical sciences. As such, any serious investigator in these fields must have a grasp of the basic principles. With modern computer facilities there is little need for familiarity with the technical details of statistical calculations. However, a healthcare professional should understand when such calculations are valid, when they are not and how they should be interpreted.</p>
+<p>The use of statistical methods pervades the medical literature. In a survey of 350 original articles published in three UK journals of general practice: <em>British Medical Journal (General Practice Section)</em>, <em>British Journal of General Practice</em> and <em>Family Practice</em>, over a one-year period, Rigby et al.&nbsp;(2004) found that 66% used some form of statistical analysis. Another review by Strasak et al.&nbsp;(2007) of 91 original research articles published in <em>The New England Journal of Medicine</em> (one of the prestigious peer-reviewed medical journals) found an even higher percentage (95%) of using inferential statistics, for example, hypothesis testing and deriving estimates. It appears, therefore, that the majority of papers published in these journals require some statistical knowledge for a complete understanding.</p>
+<p>To students schooled in the ‘hard’ sciences of physics and chemistry it may be difficult to appreciate the variability of biological data. If one repeatedly puts blue litmus paper into acid solutions it turns red 100% of the time, not most (say 95%) of the time. In contrast, if one gives aspirin to a group of people with headaches, not all of them will experience relief. Penicillin was perhaps one of the few ‘miracle’ cures where the results were so dramatic that little evaluation was required. Absolute certainty in medicine is rare.</p>
+<p>Measurements on human subjects seldom give exactly the same results from one occasion to the next. For example, O’ Sullivan et al (1999), found that systolic blood pressure (SBP) in normal healthy children has a wide range, with 95% of children having SBPs below 130 mmHg when they were resting, rising to 160 mmHg during the school day, and falling again to below 130 mmHg at night. Furthermore, Hansen et al.&nbsp;(2010) in a study of over 8000 subjects found that increasing variability in blood pressure over 24 hours was a significant and independent predictor of mortality and a cardiovascular and stroke events.</p>
+<p>This variability is also inherent in responses to biological hazards. Most people now accept that cigarette smoking causes lung cancer and heart disease, and yet nearly everyone can point to an apparently healthy 80-year-old who has smoked for many years without apparent ill effect. Although it is now known from the report of Doll et al (2004) that about half of all persistent cigarette smokers are killed by their habit, it is usually forgotten that until the 1950s, the cause of the rise in lung cancer deaths was a mystery and commonly associated with general atmospheric pollution such as the exhaust fumes of cars. It was not until the carefully designed and statistically analysed case–control and cohort studies of Richard Doll and Austin Bradford Hill and others, that smoking was identified as the true cause. Enstrom et al.&nbsp;(2003) moved the debate on to ask whether or not passive smoking causes lung cancer. This is a more difficult question to answer since the association is weaker. However, studies by Cao et al.&nbsp;(2015) have now shown that it is a major health problem and scientists at the International Agency for Rsearch on Cancer (IARC) have concluded that there is sufficient evidence that second-hand smoke causes lung cancer (IARC 2012). Restrictions on smoking in public places have been imposed to smokers.</p>
+<p>With such variability, it follows that in any comparison made in a medical context, such as people on different treatments, differences are almost bound to occur. These differences may be due to real effects, random variation or variation in some other factor that may affect an outcome. It is the job of the analyst to decide how much variation should be ascribed to chance or other factors, so that any remaining variation can be assumed to be due to a real effect. This is the art of statistics.</p>
+</section><section id="why-jamovi" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="why-jamovi">
+<span class="header-section-number">1.2</span> Why Jamovi?</h2>
+<p>Jamovi is a new fee open “3rd generation” statistical software that is built on top of the programming language R (<a href="#fig-jamovi_0">Figure&nbsp;<span>1.1</span></a>). Designed from the ground up to be easy to use, Jamovi is a compelling alternative to costly statistical products such as SPSS and SAS.</p>
+<div id="fig-jamovi_0" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/jamovi_0.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 1.1: Jamovi is free and open statistical software</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Some other advantages are:</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ol type="1">
+<li>Enables integration with R</li>
+<li>It provides informative tables and neat visuals</li>
+<li>Gives access to a user guide and community resources from the Jamovi website</li>
+</ol>
+</div>
+</div>
+</section><section id="types-of-data" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="types-of-data">
+<span class="header-section-number">1.3</span> Types of Data</h2>
+<p>Data can be either categorical or numerical (otherwise known as qualitative and quantitative) in nature (<a href="#fig-data_types">Figure&nbsp;<span>1.2</span></a>).</p>
+<div id="fig-data_types" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="images/types_data.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure 1.2: Broad classification of the different types of data with examples</figcaption><p></p>
+</figure>
+</div>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Example from the literature - Salicylic acid plasters for treatment of foot corns</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> presents a typical table with basic characteristics of a set of patients entered into a randomized controlled trial (RCT) that investigated the effectiveness of salicylic acid plasters compared with usual scalpel debridement for treatment of foot corns <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>. Corns and calluses are areas of hard, thickened skin that develop when the skin is exposed to excessive pressure or friction. They commonly occur on the feet and can cause pain and discomfort when you walk.</p>
+</div>
+</div>
+<div id="tbl-corn" class="anchored">
+<table class="table">
+<caption>Table 1.1: Baseline characteristics of patients with foot corns by treatment group. <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>
+</caption>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 21%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th></th>
+<th>
+<p>Corn Plaster, n (%)</p>
+(n=101)</th>
+<th>
+<p>Scalpel, n (%)</p>
+(n=101)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Gender</strong></td>
+<td>Male</td>
+<td>42 (42)</td>
+<td>42 (42)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Female</td>
+<td>59 (59)</td>
+<td>59 (58)</td>
+</tr>
+<tr class="odd">
+<td><strong>Center</strong></td>
+<td>Central</td>
+<td>58 (57)</td>
+<td>52 (52)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Manor</td>
+<td>13 (13)</td>
+<td>20 (20)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Jordanthorpe</td>
+<td>10 (10)</td>
+<td>14 (14)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Limbrick</td>
+<td>3 (3)</td>
+<td>6 (6)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Firth Park</td>
+<td>7 (7)</td>
+<td>4 (4)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Huddersfield</td>
+<td>5 (5)</td>
+<td>4 (4)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Darnall</td>
+<td>5 (5)</td>
+<td>1 (1)</td>
+</tr>
+<tr class="even">
+<td>
+<p><strong>Smoking</strong></p>
+<p><strong>History</strong></p>
+</td>
+<td>Non-smoker</td>
+<td>34 (35)</td>
+<td>40 (40)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Previous smoker</td>
+<td>22 (22)</td>
+<td>16 (16)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Current smoker</td>
+<td>42 (43)</td>
+<td>43 (43)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Missing</td>
+<td>3 (3)</td>
+<td>2 (2)</td>
+</tr>
+<tr class="even">
+<td><strong>Numbers of corns</strong></td>
+<td>1</td>
+<td>48 (48)</td>
+<td>66 (65)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>2</td>
+<td>28 (28)</td>
+<td>23 (23)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>3</td>
+<td>24 (24)</td>
+<td>12 (12)</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Missing</td>
+<td>1 (1)</td>
+<td>0 (0)</td>
+</tr>
+<tr class="even">
+<td>
+<p><strong>Age (yrs),</strong></p>
+<p><strong>mean (sd)</strong></p>
+</td>
+<td></td>
+<td>58.5 (15.6)</td>
+<td>59.7 (17.5)</td>
+</tr>
+<tr class="odd">
+<td>
+<p><strong>Corn size (mm),</strong></p>
+<p><strong>median (IQR)</strong></p>
+</td>
+<td></td>
+<td>4 (3, 5)</td>
+<td>3 (3, 5)</td>
+</tr>
+<tr class="even">
+<td>
+<p><strong>EQ-5D,</strong></p>
+<p><strong>median (IQR)</strong></p>
+</td>
+<td></td>
+<td>0.73 (0.59, 0.80)</td>
+<td>0.73 (0.66, 0.80)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>In this example since we have 101 patients in each randomized group the percentages are almost the same as the raw counts. However, for most studies we are unlikely to have exactly 100 participants in each group!</p>
+<section id="categorical-data" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="categorical-data">
+<span class="header-section-number">1.3.1</span> Categorical Data</h3>
+<p><strong>A. Nominal Data</strong></p>
+<p><strong>Nominal categorical data</strong> are data that one can name and put into categories. They are not measured but simply <strong>counted</strong>. They often consist of <strong>unordered</strong> ‘either–or’ type observations which have two categories and are often know as <strong>binary</strong>. For example: dead or alive; male or female; cured or not cured; pregnant or not pregnant. In <a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> gender is a binary variable. However, nominal categorical data often can have <strong>more that two categories</strong>, for example, blood group A, B, AB, 0; country of origin; ethnic group; eye color. The <a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> gives the number and percentages of people treated at each of the seven centers in each of the two randomized groups.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Numerical representation of categories are just codes</strong></p>
+<p>We can denote a male and female as 1 and 2 for gender and denote A, B, AB and 0, as 1, 2, 3, and 4 for blood type. Unlike numerical data, the numbers representing different categories do not have mathematical meanings (they are just codes).</p>
+</div>
+</div>
+<p><strong>Β. Ordinal Data</strong></p>
+<p>If there are more than two categories of classification it may be possible to <strong>order</strong> them in some way. For example, after treatment a patient may be either improved, the same or worse. Another example of an ordinal variable is the variable <strong>pain</strong> where a subject is asked to describe their pain verbally as minimal, moderate, severe, or unbearable. In <a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> <strong>smoking history</strong> is given in three categories: non-smoker, previous smoker, and current smoker. Thus, someone who is a current smoker has more recent exposure to tobacco than someone who is an ex-smoker and someone who has never smoked. However, <strong>without further knowledge</strong> (of the current and past levels of tobacco consumption) it would be wrong to ascribe a numerical quantity to the category, for example, non-smoker=0, previous smoker=1, and current smoker=2, as one cannot say that someone who is current smoker has twice the levels of tobacco consumption as someone who is a previous smoker.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Collapsion of categories leads to a loss of information</strong></p>
+<p>Ordinal data are often reduced to two categories to simplify analysis and presentation, which may result in a considerable loss of information.</p>
+</div>
+</div>
+</section><section id="numerical-data" class="level3" data-number="1.3.2"><h3 data-number="1.3.2" class="anchored" data-anchor-id="numerical-data">
+<span class="header-section-number">1.3.2</span> Numerical Data</h3>
+<p><strong>A. Count (or discrete) Data</strong></p>
+<p><a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> gives details of the number of corns each participant had at the start of the trial, since this can only be a whole number or integer value, for example, 0, 1, 2, or 3 in this trial, this is termed count data. Other examples are often counts per unit of time such as the number of deaths in a hospital per year, the number of visits to the GP in a year, or the number of attacks of asthma a person has per month. In dentistry, a common measure is the number of decayed, filled or missing teeth (DFM).</p>
+<p>The difference between such data as these and the ordered categorical data described earlier can be seen by considering an example of each:</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Illustrative Example: Ordinal Vs Discrete data</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>Ordinal categorical:</em></strong> Stage of breast cancer: I II III IV</p>
+<p><strong><em>Discrete numerical:</em></strong> Number of children: 0 1 2 3 4 5+</p>
+<p>We cannot say that stage IV is twice as bad as stage II nor that the difference between stages I and II is equivalent to that between stages III and IV. In contrast, three children are three times as many as one, and a difference of one means the same throughout the range of values.</p>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Discrete Vs Ordinal Data</strong></p>
+<p>In practice discrete data are often treated in statistical analyses as if they were ordered categories. This is not wrong, but it may not be getting the most out of the data. Conversely, when ordered categories are numbered, as with stage of disease, the temptation to treat these numbers as statistically meaningful must be resisted. For example, it is not sensible to calculate the average stage of cancer. The only information the numbers contain is in the ordering, which would be conveyed equally by calling them A, B, C, D and so on.</p>
+</div>
+</div>
+<p><strong>Β. Continuous (or measured) Data</strong></p>
+<p>Such data are measurements that can, in theory at least, take any value within a given range (they are restricted by the accuracy of the measuring instrument). These data contain the most information, and are the ones most commonly used in statistics. Examples of continuous data in <a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> are: age, corn size, and EQ-5D.</p>
+<p>Sometimes it is reasonable to treat discrete data as if they were continuous, at least as far as statistical analysis goes. While age is a continuous measurement, <strong>age at last birthday is discrete</strong>. In studies of adults with ages ranging from, say, 16 to 80, no harm is done in considering age in years as a continuous measurement (and this is standard practice), but for studies of pre-school children it would be better to use age in months. <strong>Heart rate</strong> (in beats per minute) is another discrete measurement that is usually regarded as continuous. Although the essential requirement for this change of status is that there should be a large number of different possible values, in practice we do not worry too much about analysing discrete measurements as if they were continuous.</p>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Categorization of numerical data leads to a loss of information</strong></p>
+<p>For simplicity, it is often the case in medicine that continuous data are dichotomized to make nominal data. Thus diastolic blood pressure (DBP), which is continuous, is converted into hypertension (&gt;90 mmHg) and normotension (≤90 mmHg). This clearly leads to a loss of information. There are two main reasons for doing this. It is easier to describe a population by the proportion of people affected, for example, the proportion of people in the population with hypertension is 10%. Further, one often has to make a decision: if a person has hypertension, then they will get treatment, and this too is easier if high blood pressure has been categorized.</p>
+<p>One can also divide a continuous variable into more than two groups. For example, we could divide age into age bands of equal lengths of, say 10 years such as: 0-9, 10-19, 20-29, etc. When categorizing continuous data authors should give an indication as to why they chose these cut-off points, and a reader has to be very wary to guard against the fact that the cuts may be chosen to make a particular point. Some statisticians have termed the habit of categorizing continuous variables as “dichotomania”, which they regard as poor practice since it loses information and assumes a discontinuous relationship that is unlikely in nature.</p>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Record the actual values</strong></p>
+<p>It is best to record the actual value of blood pressure, haemoglobin, etc. It is easy to convert to categories in the analysis, but the raw data cannot be retrieved later if only categories are recorded. Information is lost with no compensatory gain. Indeed, the statistical analysis of continuous data is more powerful, and often simpler.</p>
+<p>When some calculation is necessary to derive the observation of interest this should be done by the computer. Thus it is much better to record date of birth and date of examination for subsequent calculation of age rather than to rely on mental arithmetic.</p>
+</div>
+</div>
+<p>The degree of measurement accuracy and the type of data are both important in relation to carrying out a proper statistical analysis.</p>
+</section></section><section id="summarizing-categorical-data" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="summarizing-categorical-data">
+<span class="header-section-number">1.4</span> Summarizing Categorical Data</h2>
+<p>Binary data are the simplest type of data. Each individual has a label which takes one of two values such as male or female, corn healed or not healed. A simple summary would be to count the different types of labels and find the <strong>frequencies</strong>. The set of frequencies of all the possible categories is called the <strong>frequency distribution</strong> of the variable.</p>
+<p>However, a raw count is rarely useful. For example, in <a href="#tbl-corn">Table&nbsp;<span>1.1</span></a> there are more non-smokers in the scalpel group (40 out of 99 or 40%) compared to corn plaster group (34 out of 98 or 35%). It is only when this count is expressed as a proportion (relative frequency) that it becomes useful. Hence the first step to analyzing categorical data is to count the number of observations in each category (frequencies) and express them as <strong>proportions</strong> of the total sample size (relative frequencies).</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Illustrative Example - Salicylic acid plasters for treatment of foot corns</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Farndon et al.&nbsp;(2013) reports a RCT that investigated the effectiveness of salicylic acid plasters compared with usual scalpel debridement for treatment of foot corns. As we have already mentioned one categorical variable recorded was the center where each trial participant was treated. Trial participants were treated at one of seven centers and the corresponding categories as displayed in <a href="#tbl-centers1">Table&nbsp;<span>1.2</span></a>. The first column shows category (treatment center) names, whilst the second shows the number of individuals in each category together with its percentage contribution to the total. <a href="#tbl-centers1">Table&nbsp;<span>1.2</span></a> clearly shows that the majority (54.5%) of patients were treated at the “Central” treatment center.</p>
+<p>In addition to tabulating each variable separately, we might be interested in whether the distribution of patients across each center is the same for each randomized group. <a href="#tbl-centers2">Table&nbsp;<span>1.3</span></a> shows the distribution of the number of patients treated at center by randomized group; in this case it can be said that the treatment center has been <strong><em>cross-tabulated</em></strong> with randomized group. <a href="#tbl-centers2">Table&nbsp;<span>1.3</span></a> is an example of a <strong><em>contingency</em></strong> table with seven rows (representing treatment center) and two columns (randomized group). Note that we are interested in the distribution of patients across the seven centers in each randomized group (to see whether or not we have similar numbers of patients randomized to each treatment within each center), and so the percentages add to 100 down each column, rather than across the rows.</p>
+</div>
+</div>
+<div id="tbl-centers1" class="anchored">
+<table class="table">
+<caption>Table 1.2: Frequency and percentage distributions of treatment center among 202 patients with corns <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>
+</caption>
+<thead><tr class="header">
+<th>Treatment center</th>
+<th>Frequency</th>
+<th>Percentage</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Central</td>
+<td>110</td>
+<td>54.5%</td>
+</tr>
+<tr class="even">
+<td>Manor</td>
+<td>33</td>
+<td>16.3%</td>
+</tr>
+<tr class="odd">
+<td>Jordanthorpe</td>
+<td>24</td>
+<td>11.9%</td>
+</tr>
+<tr class="even">
+<td>Limbrick</td>
+<td>9</td>
+<td>4.5%</td>
+</tr>
+<tr class="odd">
+<td>Firth Park</td>
+<td>11</td>
+<td>5.4%</td>
+</tr>
+<tr class="even">
+<td>Huddersfield</td>
+<td>9</td>
+<td>4.5%</td>
+</tr>
+<tr class="odd">
+<td>Darnall</td>
+<td>6</td>
+<td>3.0%</td>
+</tr>
+<tr class="even">
+<td><strong>Total</strong></td>
+<td>202</td>
+<td>100.0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="tbl-centers2" class="anchored">
+<table class="table">
+<caption>Table 1.3: Cross-tabulation of treatment center by randomized group for 202 patients with corns <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>
+</caption>
+<thead><tr class="header">
+<th></th>
+<th>Corn plaster, n(%)</th>
+<th>Scalpel, n(%)</th>
+<th>All, n(%)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Central</td>
+<td>58 (57)</td>
+<td>52 (52)</td>
+<td>110 (54.5)</td>
+</tr>
+<tr class="odd">
+<td>Manor</td>
+<td>13 (13)</td>
+<td>20 (20)</td>
+<td>33 (16.3)</td>
+</tr>
+<tr class="even">
+<td>Jordanthorpe</td>
+<td>10 (10)</td>
+<td>14 (14)</td>
+<td>24 (11.9)</td>
+</tr>
+<tr class="odd">
+<td>Limbrick</td>
+<td>3 (3)</td>
+<td>6 (6)</td>
+<td>9 (4.5)</td>
+</tr>
+<tr class="even">
+<td>Firth Park</td>
+<td>7 (7)</td>
+<td>4 (4)</td>
+<td>11 (5.4)</td>
+</tr>
+<tr class="odd">
+<td>Huddersfield</td>
+<td>5 (5)</td>
+<td>4 (4)</td>
+<td>9 (4.5)</td>
+</tr>
+<tr class="even">
+<td>Darnall</td>
+<td>5 (5)</td>
+<td>1 (1)</td>
+<td>6 (3.0)</td>
+</tr>
+<tr class="odd">
+<td><strong>Total</strong></td>
+<td>101 (100)</td>
+<td>101 (100)</td>
+<td>202 (100)</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Recommendations for reporting numbers</strong></p>
+<div id="tbl-rules1" class="anchored">
+<table class="table">
+<caption>Table 1.4: Reporting numbers and percentages</caption>
+<colgroup>
+<col style="width: 49%">
+<col style="width: 50%">
+</colgroup>
+<thead><tr class="header">
+<th>Recommendation</th>
+<th>Correct expression</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Numbers</strong></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>In a sentence, numbers less than 10 are words.</td>
+<td>Smoking history was missing from three patients in the corn plaster study group.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>In a sentence, numbers 10 or more are numbers.</td>
+<td>There are 34 non-smokers patients in the corn plaster group.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Avoid starting a sentence with numbers.</td>
+<td>Thirty-four non-smokers patients recorded in the cord plaster group.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>Percentages</strong></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Report percentages to only one decimal place if the sample size is larger than 100.</td>
+<td>In the sample of 202 patients, 4.5% were treated at the “Limbrick” treatment center.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Report percentages with no decimal places if the sample size is less than 100.</td>
+<td>In the sample of 98 patients in the corn plaster group, 35% were non-smokers.</td>
+</tr>
+<tr class="even">
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td>Do not use percentages if the sample size is less than 20.</td>
+<td>From 16 previous smokers in the scalpel group, 7 were females.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</section><section id="displaying-categorical-data" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="displaying-categorical-data">
+<span class="header-section-number">1.5</span> Displaying Categorical Data</h2>
+<p>While frequency tables are extremely useful, the best way to investigate a data set is to plot it. For categorical variables, such as gender and treatment center, it is straightforward to present the number in each category, usually indicating the frequency and percentage of the total number of patients. When shown graphically this is called a <strong>bar plot</strong>.</p>
+<p><strong>A. Simple Bar Plot</strong></p>
+<p>A simple bar plot is an easy way to make comparisons across categories. <a href="#fig-barplot1">Figure&nbsp;<span>1.3</span></a> shows the centers where 202 patients with foot corns were treated in the trial of <span class="citation" data-cites="farndon2013">Farndon et al. (<a href="references.html#ref-farndon2013" role="doc-biblioref">2013</a>)</span>. Along the horizontal axis (x-axis) are the different treatment centers whilst on the vertical axis (y-axis) is the percentage. The height of each bar represents the percentage of the total patients in that category. For example, it can be seen that the percentage of participants who were treated in the “Central” center was about 55%.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-barplot1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="introduction_files/figure-html/fig-barplot1-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 1.3: Bar plot showing where 202 patients with corns were treated <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Basic Properties of Simple Bar plot</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><p>All rectangular bars should have equal width and should have equal space between them.</p></li>
+<li><p>The rectangular bars can be drawn horizontally or vertically.</p></li>
+<li><p>The height of the rectangular bar is equivalent to the data they represent.</p></li>
+<li><p>The rectangular bars must be plotted against a common zero-valued baseline.</p></li>
+</ul>
+</div>
+</div>
+<p><strong>B. Side-by-side and Grouped Bar Plots</strong></p>
+<p>If the sample is further classified into whether the patient was treated with corn plasters or scalpel then it becomes impossible to present the data as a single bar plot. We could present the data as a side by side bar plot (see <a href="#fig-barplot2">Figure&nbsp;<span>1.4</span></a>) but is preferable to present the data in one graph with the same scales and axes to make the visual comparisons easier (grouped bar plot) (see <a href="#fig-barplot3">Figure&nbsp;<span>1.5</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-barplot2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="introduction_files/figure-html/fig-barplot2-1.png" class="img-fluid figure-img" width="912"></p>
+<p></p><figcaption class="figure-caption">Figure 1.4: Side-by-side bar plot showing where 202 patients with corns were treated by randomized group <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-barplot3" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="introduction_files/figure-html/fig-barplot3-1.png" class="img-fluid figure-img" width="864"></p>
+<p></p><figcaption class="figure-caption">Figure 1.5: Grouped bar plot showing where 202 patients with corns were treated by randomized group <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Report the actual total sample sizes for each group</strong></p>
+<p>If we do use the relative frequency scale as we have, then it is recommended to report the actual total sample sizes for each group (e.g., in the legend or caption). In this way, given the total sample size and relative frequency (from the height of the bars) we can work out the actual numbers treated in each center.</p>
+</div>
+</div>
+<p><strong>C. Stacked Bar Plot</strong></p>
+<p>Unlike a side-by-side or grouped graphs, <strong>Stacked Bar Plots</strong> segment their bars. A <strong>100% Stack Bar Plot</strong> shows the percentage-of-the-whole of each group and are plotted by the percentage of each value to the total amount in each group. This makes it easier to see if relative differences exist between quantities in each group (see <a href="#fig-stacked">Figure&nbsp;<span>1.6</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-stacked" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="introduction_files/figure-html/fig-stacked-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Figure 1.6: A horizontal 100% stacked bar plot showing the distribution of gender by randomized group <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<p>In <a href="#fig-stacked">Figure&nbsp;<span>1.6</span></a> the bars are divided into two segments only (i.e., female and male) so it is easy to read the values of each segment and to compare a specific segment through the entire set of bars (in our case the percentages are equal). This comparison can be easily made because each segment is aligned through the entire set of bars (female to the left and men to the right). If more segments were added, however, the segments in the middle would not be aligned to the left or right, which would make comparisons difficult (see <a href="#fig-stacked2">Figure&nbsp;<span>1.7</span></a>).</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-stacked2" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="introduction_files/figure-html/fig-stacked2-1.png" class="img-fluid figure-img" width="1104"></p>
+<p></p><figcaption class="figure-caption">Figure 1.7: A horizontal 100% stacked bar plot showing the distribution of treatment centers by randomized group <span class="citation" data-cites="farndon2013">(<a href="references.html#ref-farndon2013" role="doc-biblioref">Farndon et al. 2013</a>)</span>.</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="callout-warning callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Warning
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Stacked bar plots tend to become confusing when the variable has many levels</strong></p>
+<p>One issue to consider when using stacked bar plots is the number of variable levels: when dealing with many categories, stacked bar plots tend to become rather confusing.</p>
+</div>
+</div>
+</section><section id="summarizing-numerical-data" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="summarizing-numerical-data">
+<span class="header-section-number">1.6</span> Summarizing Numerical Data</h2>
+<p>A quantitative measurement contains more information than a categorical one, and so summarizing these data is more complex. One chooses summary statistics to condense a large amount of information into a few intelligible numbers, the sort that could be communicated verbally. The two most important pieces of information about a quantitative measurement are <strong>‘where is it?’</strong> and <strong>‘how variable is it?’</strong> These are categorized as <strong>measures of location</strong> (or sometimes ‘central tendency’) and <strong>measures of spread</strong> or variability.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Two summary measures should be reported for a numerical variable</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>A measure of <strong>location</strong> (where the center of the distribution of the values is located) and <strong>variability</strong> (how widely the values are spread above and below the central value) provides an informative but brief summary of a set of observations.</p>
+</div>
+</div>
+<section id="measures-of-location" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="measures-of-location">
+<span class="header-section-number">1.6.1</span> Measures of Location</h3>
+<p><strong>A. Sample Mean or Average</strong></p>
+<p>Let <span class="math inline">\(x_1, x_2,...,x_{n-1}, x_n\)</span> be a set of <em>n</em> measurements. The arithmetic sample mean or average, <span class="math inline">\(\bar{x}\)</span> (pronounced x bar), is simply the sum of the observations divided by their number <em>n</em>, thus:</p>
+<p><span class="math display">\[
+\bar{x}= \frac{Sum \ of \ all \ sample \ values }{Size \ of \ sample}= \frac{x_1 + x_2 + ... + x_{n-1} + x_n}{n}
+\]</span></p>
+<p>This formula is entirely correct, but it’s too long, so we make use of the <strong><em>summation symbol</em></strong> <span class="math inline">\(\scriptstyle\sum\)</span> to shorten it:</p>
+<p><span class="math display">\[\bar{x}=\frac{\sum_{i=1}^{n}x_{i}}{n}=\frac{1}{n}\sum_{i=1}^{n}x_{i}\]</span></p>
+<p>In the above equation, <span class="math inline">\(x_{i}\)</span> represents the individual sample values and <span class="math inline">\({\sum_{i=1}^{n}x_{i}}\)</span> their sum. The Greek letter <span class="math inline">\({\Sigma}\)</span> (sigma) is the Greek capital ‘S’ and stands for ‘sum’ and simply means ‘add up the <em>n</em> observations <span class="math inline">\(x_{i}\)</span> from the 1st to the last (nth)’.</p>
+<p>Usually, we cannot measure the population mean <span class="math inline">\({\mu}\)</span>, which is the unknown constant that we want to estimate using the sample mean <span class="math inline">\(\bar{x}\)</span>.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Example: Calculation of the Mean - Corn size data (mm)</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>In the RCT by <span class="citation" data-cites="farndon2013">Farndon et al. (<a href="references.html#ref-farndon2013" role="doc-biblioref">2013</a>)</span>, the baseline size of the corn (as its widest diameter in mm) was measured by a podiatrist (foot specialist). Consider the following 16 baseline corn sizes selected from the patients:</p>
+<p>2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3</p>
+<p>The sum of these 16 observations is: <span class="math inline">\((2 + 2 + 6 + 3 + 4 + 2 + 2 + 5 + 3 + 4 + 1 + 2 + 6 + 3 + 10 + 3)\)</span> = 58</p>
+<p>Thus, the arithmetic mean is:</p>
+<p><span class="math inline">\(\bar{x}\)</span> = 58/16 = 3.625 mm or 3.6 mm. It is usual to report one more decimal place for the mean than the data recorded.</p>
+</div>
+</div>
+<p>The major advantage of the mean is that it uses all the data values, while the main disadvantage is its sensitivity very large or very small values, which might be <strong>outliers</strong> (unusual values). For example, if we entered “100 mm” instead of “10 mm”, for the 15th patient, in the calculation of the mean, we would find the mean changed from 3.6 to 9.2. It does not necessarily follow, however, that outliers should be excluded from the final data summary, or that they result from a human error. Outliers can be legitimate anomalies that are vital for capturing information on the subject of interest.</p>
+<p>If the data are binary and are coded 0 or 1, then <span class="math inline">\(\bar{x}\)</span> is the proportion of individuals with value 1, and this can also be expressed as a percentage. In <span class="citation" data-cites="farndon2013">Farndon et al. (<a href="references.html#ref-farndon2013" role="doc-biblioref">2013</a>)</span> data, the corn had healed or resolved by a three-month follow-up in 52 out of 189 patients. In the data set the cases in which the corn was healed are coded as ‘1s’ and the cases in which the corn was not healed as ‘0s’, so the mean of this variable is 0.275 or 28%.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Advantages and Disadvantages of arithmetic mean</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Advantages of mean</strong></p>
+<ol type="1">
+<li>is simple to understand and easy to calculate</li>
+<li>uses all the data values in the calculation</li>
+<li>is algebraically defined and thus mathematically manageable</li>
+<li>has a known sampling distribution</li>
+</ol>
+<p><strong>Disadvantages of mean</strong></p>
+<ol type="1">
+<li>is highly affected by the presence of a few abnormally high or abnormally low values (outliers)</li>
+<li>is not an appropriate average for highly skewed (asymmetrical) distributions</li>
+<li>cannot be determined if any item of observation is missing</li>
+<li>cannot be determined easily by inspection of the data</li>
+</ol>
+</div>
+</div>
+<p><strong>B. Median</strong></p>
+<p>The <strong>sample median</strong> is an alternative measure of location, which is less sensitive to outliers. For observed values <span class="math inline">\(x_1, x_2,...,x_{n-1}, x_n\)</span> the median is calculated by first sorting the observed values (i.e., arranging them in an ascending/descending order) and selecting the middle one. If the sample size <em>n</em> is <strong>odd</strong>, the median is the number at the middle of the sorted observations. If the sample size is <strong>even</strong>, the median is the average of the two middle numbers.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+<strong>Example: Calculation of the Median - Corn size data (mm)</strong>
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li><strong>Even observations</strong></li>
+</ul>
+<p>We have selected 16 baseline corn sizes:</p>
+<p><strong>original data:</strong> 2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3</p>
+<p>We arrange the data in an ascending order:</p>
+<p><strong>ordered data:</strong> 1, 2, 2, 2, 2, 2, 3, <strong>3</strong>, <strong>3</strong>, 3, 4, 4, 5, 6, 6, 10</p>
+<p>As the number of observations are <strong>even</strong> (n=16), the median is the average of the two middle ordered numbers (the eighth and ninth): (3+3)/2=3 mm.</p>
+<ul>
+<li><strong>Odd observations</strong></li>
+</ul>
+<p>Let’s say we select an additional 17th subject with corn size of 10 mm, so the data are as following:</p>
+<p><strong>original data:</strong> 2, 2, 6, 3, 4, 2, 2, 5, 3, 4, 1, 2, 6, 3, 10, 3, 10</p>
+<p>We arrange the data in an ascending order:</p>
+<p><strong>ordered data:</strong> 1, 2, 2, 2, 2, 2, 3, 3, <strong>3</strong>, 3, 4, 4, 5, 6, 6, 10, 10</p>
+<p>The median would be the 9th ordered observation, which is also 3 mm.</p>
+<ul>
+<li><strong>Main Advantages and Disadvantages of median</strong></li>
+</ul>
+<p>The median has the advantage that is not affected by outliers, so for example, the median in the data would be unaffected by replacing the largest corn size of 10 mm with 100 mm. However, it does not take into account the precise value of each observation and hence does not use all information available in the data.</p>
+</div>
+</div>
+<p><strong>C. Mode</strong></p>
+<p>A third measure of location is termed the <strong>mode</strong>. This is the value that occurs <strong>most frequently</strong>, or, if the data are grouped, the grouping with the highest frequency. It is not used much in statistical analysis, since its value depends on the accuracy with which the data are measured and ignores most of the information; although it may be useful for categorical data to describe the most frequent category. Note that some data sets do not have a mode because each value occurs only once.</p>
+<p>However, the expression <strong>‘bimodal’</strong> distribution is used to describe a distribution with <strong>two peaks</strong> in it. This can be caused by mixing two or more populations together. For example, height might appear to have a bimodal distribution if one had men and women in the population.</p>
+<div class="callout-note callout callout-style-default no-icon callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon no-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Example: Calculation of the Mode - Corn size data (mm)
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>original data:</strong> <strong>2</strong>, <strong>2</strong>, 6, 3, 4, <strong>2</strong>, <strong>2</strong>, 5, 3, 4, 1, <strong>2</strong>, 6, 3, 10, 3</p>
+<p>In the 16 patients with corns, 5 patients have corn size of 2 mm; thus, the <strong>modal corn size is 2 mm</strong>.</p>
+</div>
+</div>
+</section></section><section id="displaying-numerical-data" class="level2" data-number="1.7"><h2 data-number="1.7" class="anchored" data-anchor-id="displaying-numerical-data">
+<span class="header-section-number">1.7</span> Displaying Numerical Data</h2>
+<p>The **sample mean* is calculated as follows:</p>
+<ul>
+<li>Mean: arithmetic average</li>
+</ul>
+<p>Population mean <span class="math inline">\(\mu\)</span> is the long-run average (let <span class="math inline">\(n \rightarrow \infty\)</span> in computing <span class="math inline">\(\bar{x}\)</span>) + center of mass of the data (balancing point) + highly influenced by extreme values even if they are highly atypical</p>
+<ul>
+<li>Median: middle sorted value, i.e., value such that <span class="math inline">\(\frac{1}{2}\)</span> of the values are below it and above it
+<ul>
+<li>always descriptive</li>
+<li>unaffected by extreme values</li>
+<li>not a good measure of central tendency when there are heavy ties in the data</li>
+</ul>
+</li>
+</ul>
+
+
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-farndon2013" class="csl-entry" role="doc-biblioentry">
+Farndon, Lisa J, Wesley Vernon, Stephen J Walters, Simon Dixon, Mike Bradburn, Michael Concannon, and Julia Potter. 2013. <span>“The Effectiveness of Salicylic Acid Plasters Compared with <span>‘Usual’</span> Scalpel Debridement of Corns: A Randomised Controlled Trial.”</span> <em>Journal of Foot and Ankle Research</em> 6 (1): 40. <a href="https://doi.org/10.1186/1757-1146-6-40">https://doi.org/10.1186/1757-1146-6-40</a>.
+</div>
+</div>
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      let href = ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Preface</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./lab1.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">LAB I: Introduction to Jamovi (Part I)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+<footer class="footer"><div class="nav-footer">
+    <div class="nav-footer-left">Copyright 2022, Konstantinos I. Bougioukas</div>   
+  </div>
+</footer>
+
+
+</body></html>

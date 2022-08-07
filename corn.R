@@ -16,7 +16,7 @@ dat <- corn %>%
  )
 
 table(corn$centre_a)
-names(corn)
+names(dat_corn)
 
 
 centres <- dat %>% 
@@ -37,5 +37,5 @@ ggplot(centres, aes(x = centre_a, y = percent)) +
   )
 
 
-
+In the RCT by @farndon2013, the baseline size of the corn (as its widest diameter in mm) was measured by an independent podiatrist (foot specialist) who was not involved in the subsequent treatment of the patients. Consider the following 16 baseline corn sizes in mm, listed in ascending order, 
 

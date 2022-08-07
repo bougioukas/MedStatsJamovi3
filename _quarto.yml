@@ -35,7 +35,7 @@ book:
     - reporting.qmd
     - references.qmd
     
-  number-depth: 2
+  
   page-footer: 
     left: "Copyright 2022, Konstantinos I. Bougioukas" 
 
@@ -60,6 +60,7 @@ format:
     fontsize: 14pt
     mainfont: "Roboto"
     fig-pos: 'ht'
+    number-depth: 1
     toc-depth: 2
     geometry: 
       - margin=0.90in
@@ -70,4 +71,5 @@ format:
         \usepackage{fontawesome5}
         \raggedbottom
 editor: visual
-
+execute:
+  freeze: auto
